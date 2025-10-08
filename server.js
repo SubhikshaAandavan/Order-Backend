@@ -15,7 +15,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["https://order-front-oi5q57j92-subhiksha-as-projects.vercel.app/"],
+    origin: ["https://order-front-end-chi.vercel.app/"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
