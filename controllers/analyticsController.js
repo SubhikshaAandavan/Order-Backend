@@ -1,4 +1,4 @@
-import { pool } from "../db/db.js";
+import  pool  from "../db/db.js";
 
 // 1️⃣ Order Status Distribution
 export const getOrderStatus = async (req, res) => {
