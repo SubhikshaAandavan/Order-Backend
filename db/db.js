@@ -12,13 +12,13 @@
 //   .then(() => console.log("✅ Connected to PostgreSQL Database"))
 //   .catch((err) => console.error("❌ DB Connection Error:", err.message));
 
-import pg from "pg";
-const { Pool } = pg;
+import pkg from "pg";
+const { Pool } = pkg;
 
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
+  connectionString: "postgresql://neondb_owner:npg_YxhQACS7D6gy@ep-quiet-boat-a1s8l838-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require",
   ssl: {
-    rejectUnauthorized: false, // Neon requires SSL
+    rejectUnauthorized: false, //
   },
 });
 
