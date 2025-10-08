@@ -30,11 +30,20 @@ app.use("/api/analytics", analyticsRoutes);
 app.use("/uploads", express.static("uploads")); // serve static files
 app.use("/api/upload", uploadRoutes);
 app.use("/api/products", productRoutes);
-app.listen(5000, () => console.log("✅ Server running on port 5000"));
+
+
+
+// ✅ Optional: Add a root route for testing
+app.get("/", (req, res) => {
+  res.send("🚀 Backend is running successfully!");
+});
+
+// ✅ Single listen (important for Render)
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));
 
 
 
 
-const PORT = 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
 
