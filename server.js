@@ -12,7 +12,15 @@ import productRoutes from "./routes/productRoutes.js";
 
 
 const app = express();
-app.use(cors());
+
+app.use(
+  cors({
+    origin: ["https://order-front-oi5q57j92-subhiksha-as-projects.vercel.app/"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
+
 app.use(express.json());
 
 app.use("/api/orders", orderRoutes);
@@ -29,3 +37,4 @@ app.listen(5000, () => console.log("✅ Server running on port 5000"));
 
 const PORT = 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
