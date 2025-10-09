@@ -15,7 +15,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["https://order-front-mny428zlv-subhiksha-as-projects.vercel.app"],
+    origin: ["https://order-front-end-chi.vercel.app/"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
@@ -27,7 +27,7 @@ app.use("/api/orders", orderRoutes);
 
 app.use("/api/analytics", analyticsRoutes);
 
-app.use("/uploads", express.static("uploads")); // serve static files
+app.use("/uploads", express.static("uploads")); // serve static files.
 app.use("/api/upload", uploadRoutes);
 app.use("/api/products", productRoutes);
 
